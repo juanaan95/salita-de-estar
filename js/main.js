@@ -21,6 +21,10 @@ const routes = {
 const renderRoute = () => {
   const hash = window.location.hash.slice(1) || "home";
   app.innerHTML = "";
+
+  // Re-renderiza el navbar en cada cambio de ruta
+  navigator(navbar);
+
   if (routes[hash]) {
     routes[hash](app); // ← aquí se ejecuta renderLogin(app)
   } else {
