@@ -1,64 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    text-align: center;
-    font-size: var(--son-font-m);
-    font-family: "Montserrat", serif;
-    font-style: normal;
-    font-weight: 400;
-    color: var(--son-color-font);
-  }
-
-:root {
-    /* COLORS */
-    --sde-color-white: #FFFFFF;
-    --sde-color-sec: #FF8C1D;
-    --sde-color-pri: #BA522B;
-    --sde-color-bc: #F5F0DD;
-    --sde-color-black: #000000;
-    --sde-color-font: var(--son-color-black);
-
-    /* FONT SIZES */
-    --sde-font-xxxl: 50px;
-    --sde-font-xl: 36px;
-    --sde-font-l: 25px;
-    --sde-font-m: 16px;
-    --sde-font-s: 12px;
-    --sde-font-xs: 10px;
-
-    /* SPACINGS */
-
-    /* RADIUS */
-    --sde-radius-primary: 20px;
-    --sde-radius-secundary: 10px;
-    --sde-radius-buttons: 5px;
-
-    /* PADDING */
-    --sde-padding-xs: 5px;
-    --sde-padding-s: 10px;
-    --sde-padding-m: 20px;
-    --sde-padding-l: 30px;
-    --sde-padding-xl: 40px;
-    --sde-padding-xxl: 60px;
-    --sde-padding-xxxl: 80px;
-
-    /* MARGIN */
-    --sde-margin-xs: 5px;
-    --sde-margin-s: 10px;
-    --sde-margin-m: 20px;
-    --sde-margin-l: 30px;
-    --sde-margin-xl: 40px;
-
-    /* GAP */
-    --sde-gap-s: 10px;
-    --sde-gap-m: 15px;
-    --sde-gap-l: 20px;
-    --sde-gap-xl: 30px;
-}
-
 body {
     margin: 0;
     background-color: var(--sde-color-bc);
@@ -166,6 +107,76 @@ button:hover {
     bottom: 0;
     width: 100%;
 }
+
+.perfil-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--sde-padding-m);
+    background-color: var(--sde-color-white);
+    border-radius: var(--sde-radius-primary);
+  }
+  
+  .perfil-container h2 {
+    font-size: var(--sde-font-xl);
+    font-weight: bold;
+    color: var(--sde-color-pri);
+    margin-bottom: var(--sde-margin-m);
+  }
+  
+  .perfil-container form {
+    margin-top: var(--sde-margin-m);
+  }
+  
+  .perfil-container form div {
+    margin-bottom: var(--sde-margin-s);
+  }
+  
+  .perfil-container label {
+    display: block;
+    margin-bottom: var(--sde-margin-xs);
+    font-size: var(--sde-font-m);
+    font-weight: bold;
+    color: var(--sde-color-black);
+  }
+  
+  .perfil-container input[type="text"],
+  .perfil-container input[type="email"],
+  .perfil-container input[type="file"] {
+    width: 100%;
+    padding: var(--sde-padding-s);
+    font-size: var(--sde-font-m);
+    border-radius: var(--sde-radius-buttons);
+    border: 1px solid var(--sde-color-black);
+    background-color: var(--sde-color-white);
+    color: var(--sde-color-black);
+  }
+  
+  .perfil-container button[type="submit"],
+  #logoutBtn {
+    background-color: var(--sde-color-sec);
+    color: var(--sde-color-white);
+    border: none;
+    padding: var(--sde-padding-s) var(--sde-padding-m);
+    margin-top: var(--sde-margin-m);
+    cursor: pointer;
+    border-radius: var(--sde-radius-buttons);
+    font-size: var(--sde-font-m);
+    transition: background-color 0.3s ease;
+  }
+  
+  .perfil-container button[type="submit"]:hover,
+  #logoutBtn:hover {
+    background-color: var(--sde-color-pri);
+  }
+  
+  #imagenPerfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: var(--sde-margin-s);
+  }
+  
 
 @media (min-height: 600px) {
     body {

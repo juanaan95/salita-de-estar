@@ -3,6 +3,7 @@ import inicio from './inicio.js';
 import { renderLogin } from './login.js';
 import { renderRegister } from './register.js';
 import { renderPerfil } from './perfil.js';
+import { renderFooter } from './footer.js';
 
 const navbar = document.getElementById("navbar");
 const app = document.getElementById("app");
