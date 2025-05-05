@@ -4,6 +4,7 @@ import { renderLogin } from './login.js';
 import { renderRegister } from './register.js';
 import { renderPerfil } from './perfil.js';
 import { renderFooter } from './footer.js';
+import { renderArtistas } from './artistas.js';
 
 const navbar = document.getElementById("navbar");
 const app = document.getElementById("app");
@@ -13,7 +14,23 @@ navigator(navbar);
 const routes = {
   home: inicio,
   galeria: (el) => el.innerHTML = '<h2>Galería (próximamente)</h2>',
-  artistas: (el) => el.innerHTML = '<h2>Artistas (próximamente)</h2>',
+  artistas: (el) => {
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+  
+    if (!usuario) {
+      // No logueado: pide iniciar sesión
+      localStorage.setItem('destinoProtegido', 'artistas');
+      alert('Acceso exclusivo a artistas. Si es fotógrafo inicie sesión.');
+      window.location.hash = 'login';
+    } else if (usuario.tipo_usuario !== 'fotografo') {
+      // Logueado pero no es fotógrafo: acceso denegado
+      alert('Acceso denegado.');
+      window.location.hash = 'home';
+    } else {
+      // Es fotógrafo: puede ver la sección
+      el.innerHTML = '<h2>Bienvenido Artista</h2><p>Contenido exclusivo para fotógrafos.</p>';
+    }
+  },
   login: renderLogin,
   register: renderRegister,
   perfil: renderPerfil,
