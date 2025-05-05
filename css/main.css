@@ -1,8 +1,10 @@
 @import url('./style.css');
 
 @import url('./variables.css');
-@import url('./reset.css');
-@import url('./layout.css');
-@import url('./components.css');
+@import url('./navigator.css');
+@import url('./inicio.css');
+@import url('./login.css');
+@import url('./register.css');
 @import url('./perfil.css');
-@import url('./home.css');
+@import url('./footer.css');
+

@@ -66,4 +66,14 @@
     display: inline-block;
     margin-left: 0.5rem;
   }
-  
+
+  .footer {
+    background-color: var(--sde-color-pri);
+    color: var(--sde-color-bc);
+    padding: var(--sde-padding-s);
+    text-align: center;
+    font-size: var(--sde-font-s);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
