@@ -13,8 +13,15 @@ $apellido1 = trim($data['apellido1'] ?? '');
 $apellido2 = trim($data['apellido2'] ?? '');
 $email = trim($data['email'] ?? '');
 $password = trim($data['password'] ?? '');
-$tipo_usuario = trim($data['tipo_usuario'] ?? 'comprador');
 $pais = trim($data['pais'] ?? null);
+$tipo_usuario = strtolower(trim($data['tipo_usuario'] ?? 'comprador'));  // Convertir a minúsculas para evitar problemas
+
+// Validar tipo_usuario
+$tipos_validos = ['comprador', 'fotografo'];  // Cambiar 'artista' por 'fotografo'
+if (!in_array($tipo_usuario, $tipos_validos)) {
+    echo json_encode(['success' => false, 'message' => 'Tipo de usuario no válido']);
+    exit;
+}
 
 // Validación básica
 if (!$nombre || !$apellido1 || !$email || !$password) {
@@ -23,11 +30,11 @@ if (!$nombre || !$apellido1 || !$email || !$password) {
 }
 
 try {
-    // Conexión con la base salita_de_estar
+    // Conexión a la base de datos
     $host = 'localhost';
     $db   = 'salita_de_estar';
     $user = 'root';
-    $pass = ''; // por defecto en XAMPP
+    $pass = ''; // Vacío porque es XAMPP
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
