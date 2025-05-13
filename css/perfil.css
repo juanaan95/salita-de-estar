@@ -1,0 +1,146 @@
+.perfil-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--sde-padding-m);
+    background-color: var(--sde-color-white);
+    border-radius: var(--sde-radius-primary);
+  }
+  
+  .perfil-container h2 {
+    font-size: var(--sde-font-xl);
+    font-weight: bold;
+    color: var(--sde-color-pri);
+    margin-bottom: var(--sde-margin-m);
+  }
+  
+  .perfil-container form {
+    margin-top: var(--sde-margin-m);
+  }
+  
+  .perfil-container form div {
+    margin-bottom: var(--sde-margin-s);
+  }
+  
+  .perfil-container label {
+    display: block;
+    margin-bottom: var(--sde-margin-xs);
+    font-size: var(--sde-font-m);
+    font-weight: bold;
+    color: var(--sde-color-black);
+  }
+  
+  .perfil-container input[type="text"],
+  .perfil-container input[type="email"],
+  .perfil-container input[type="file"] {
+    width: 100%;
+    padding: var(--sde-padding-s);
+    font-size: var(--sde-font-m);
+    border-radius: var(--sde-radius-buttons);
+    border: 1px solid var(--sde-color-black);
+    background-color: var(--sde-color-white);
+    color: var(--sde-color-black);
+  }
+  
+  .perfil-container button[type="submit"],
+  #logoutBtn {
+    background-color: var(--sde-color-sec);
+    color: var(--sde-color-white);
+    border: none;
+    padding: var(--sde-padding-s) var(--sde-padding-m);
+    margin-top: var(--sde-margin-m);
+    cursor: pointer;
+    border-radius: var(--sde-radius-buttons);
+    font-size: var(--sde-font-m);
+    transition: background-color 0.3s ease;
+  }
+  
+  .perfil-container button[type="submit"]:hover,
+  #logoutBtn:hover {
+    background-color: var(--sde-color-pri);
+  }
+  
+  #imagenPerfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: var(--sde-margin-s);
+  }
+
+  .editPerfilBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.editPerfilDiv {
+  background-color: var(--sde-color-white);
+  padding: var(--sde-padding-l);
+  border-radius: var(--sde-radius-primary);
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.editPerfilDiv h3 {
+  font-size: var(--sde-font-xl);
+  color: var(--sde-color-pri);
+  margin-bottom: var(--sde-margin-m);
+}
+
+.editPerfilDiv form div {
+  margin-bottom: var(--sde-margin-s);
+}
+
+.editPerfilDiv label {
+  display: block;
+  margin-bottom: var(--sde-margin-xs);
+  font-size: var(--sde-font-m);
+  font-weight: bold;
+  color: var(--sde-color-black);
+}
+
+.editPerfilDiv input[type="text"],
+.editPerfilDiv input[type="email"],
+.editPerfilDiv input[type="file"] {
+  width: 100%;
+  padding: var(--sde-padding-s);
+  font-size: var(--sde-font-m);
+  border-radius: var(--sde-radius-buttons);
+  border: 1px solid var(--sde-color-black);
+  background-color: var(--sde-color-white);
+  color: var(--sde-color-black);
+}
+
+.editPerfilDiv button[type="submit"] {
+  background-color: var(--sde-color-sec);
+  color: var(--sde-color-white);
+  border: none;
+  padding: var(--sde-padding-s) var(--sde-padding-m);
+  margin-top: var(--sde-margin-m);
+  cursor: pointer;
+  border-radius: var(--sde-radius-buttons);
+  font-size: var(--sde-font-m);
+  transition: background-color 0.3s ease;
+}
+
+.editPerfilDiv button[type="submit"]:hover {
+  background-color: var(--sde-color-pri);
+}
+
+.editPerfilDiv .exit {
+  position: absolute;
+  top: var(--sde-margin-s);
+  right: var(--sde-margin-s);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
