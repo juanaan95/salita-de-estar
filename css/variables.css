@@ -9,13 +9,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    text-align: center;
-    font-size: var(--son-font-m);
     font-family: "Montserrat", serif;
     font-style: normal;
-    font-weight: 400;
     color: var(--son-color-font);
   }
+
+#app {
+  max-width: 3000px;
+  margin: 0 auto;
+}
 
 :root {
     /* COLORS */
@@ -56,10 +58,12 @@ body {
     --sde-margin-m: 20px;
     --sde-margin-l: 30px;
     --sde-margin-xl: 40px;
+    --sde-margin-xxl: 150px;
 
     /* GAP */
     --sde-gap-s: 10px;
     --sde-gap-m: 15px;
     --sde-gap-l: 20px;
     --sde-gap-xl: 30px;
+    --sde-gap-xxl: 50px;
 }

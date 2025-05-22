@@ -28,10 +28,11 @@ try {
 
     $id_usuario = $_POST['id_usuario'] ?? '';
     $nombre = $_POST['nombre'] ?? '';
+    $apellido1 = $_POST['apellido1'] ?? '';
     $email = $_POST['email'] ?? '';
     $instagram = $_POST['instagram'] ?? '';
 
-    if (!$id_usuario || !$nombre || !$email) {
+    if (!$id_usuario || !$nombre || !$apellido1 || !$email) {
         echo json_encode(['success' => false, 'message' => 'Faltan campos']);
         exit;
     }
@@ -69,11 +70,11 @@ try {
     }
 
     // Actualizar datos
-    $sql = "UPDATE usuarios SET nombre = ?, email = ?, instagram = ?" .
+    $sql = "UPDATE usuarios SET nombre = ?, apellido1 = ?, email = ?, instagram = ?" .
         ($ruta_imagen ? ", imagen_perfil = ?" : "") .
         " WHERE id_usuario = ?";
 
-    $params = [$nombre, $email, $instagram];
+    $params = [$nombre, $apellido1, $email, $instagram];
     if ($ruta_imagen) $params[] = $ruta_imagen;
     $params[] = $id_usuario;
 
